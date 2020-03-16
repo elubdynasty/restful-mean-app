@@ -13,8 +13,6 @@ app.use(express.json());
 app.use('/images', express.static(path.join('backend/images'))); //any requests targeting /images will be allowed to continue.
 //app.use(bodyParser.urlencoded({ extended: false }));
 
-//xkb67Uj9nowtt9TD - MongoDB password
-//use in shell mongo "mongodb+srv://cluster0-idic2.mongodb.net/test" --username blueleo09
 
 mongoose.connect('mongodb+srv://blueleo09:xkb67Uj9nowtt9TD@cluster0-idic2.mongodb.net/node-angular') //?retryWrites=true&w=majority
   .then(() => {
