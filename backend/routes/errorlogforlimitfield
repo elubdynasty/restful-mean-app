@@ -1,0 +1,23 @@
+(node:21864) UnhandledPromiseRejectionWarning: MongoError: Failed to parse: { find: "posts", filter: {}, projection: {}, limit: "2", returnKey: false, showRecordId: false, lsid: { id: UUID("43613933-2565-481a-a29b-e37fccefadde") }, $clusterTime: { clusterTime: Timestamp(1578132172, 1), signature: { hash: BinData(0, E363A1BCE33AE96C53D33BFC03FE507D223DE62E), keyId: 6749956493426032641 } }, $db: "node-angular" }. 'limit' field must be numeric.
+    at Connection.<anonymous> (C:\Users\lvclu\Documents\VinceMeanPrac1\vincemeanprac1\node_modules\mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:203:13)
+    at processMessage (C:\Users\lvclu\Documents\VinceMeanPrac1\vincemeanprac1\node_modules\mongodb\lib\core\connection\connection.js:364:10)
+    at TLSSocket.<anonymous> (C:\Users\lvclu\Documents\VinceMeanPrac1\vincemeanprac1\node_modules\mongodb\lib\core\connection\connection.js:533:15)
+    at TLSSocket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at TLSSocket.Readable.push (_stream_readable.js:210:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:166:17)
+(node:21864) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:21864) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:21864) UnhandledPromiseRejectionWarning: MongoError: Failed to parse: { find: "posts", filter: {}, projection: {}, limit: "2", returnKey: false, showRecordId: false, lsid: { id: UUID("43613933-2565-481a-a29b-e37fccefadde") }, $clusterTime: { clusterTime: Timestamp(1578132272, 1), signature: { hash: BinData(0, 9407DF94E786100D9749C0D0E06858BE56A266A0), keyId: 6749956493426032641 } }, $db: "node-angular" }. 'limit' field must be numeric.
+    at Connection.<anonymous> (C:\Users\lvclu\Documents\VinceMeanPrac1\vincemeanprac1\node_modules\mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:203:13)
+    at processMessage (C:\Users\lvclu\Documents\VinceMeanPrac1\vincemeanprac1\node_modules\mongodb\lib\core\connection\connection.js:364:10)
+    at TLSSocket.<anonymous> (C:\Users\lvclu\Documents\VinceMeanPrac1\vincemeanprac1\node_modules\mongodb\lib\core\connection\connection.js:533:15)
+    at TLSSocket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at TLSSocket.Readable.push (_stream_readable.js:210:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:166:17)
+(node:21864) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)

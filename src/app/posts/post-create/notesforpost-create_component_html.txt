@@ -1,0 +1,22 @@
+<!-->We need input text and its button<-->
+<!-->2-Way Binding<-->
+
+<!-->Angular can easily work with forms<-->
+<!-->when Angular detects the HTML form element, it offers with the existing FormsModule,it will automatically create a JS Obj behind the scenes which represents this form below<-->
+
+<!-->*#postForm="ngForm"<-->
+<!-->This tag gives access to this form object angular created for me and
+    manages for me behind-the-scenes<-->
+<!-->[ngModel]="post?.title"<-->
+        <!-->required minlength="3"<-->
+<!-->#title="ngModel"<-->
+        <!-->Instead of typing of postForm.getControl('title') on *ngIf<-->
+        <!--> You can get rid of this 2-way binding since Angular can interpret HTML form-> [(ngModel)]="enteredTitle"<-->
+        <!-->Without the need of binding, this input will register as a control to this behind-the-scenes html form, so u need to name the normal input "name"<-->
+<!-->[ngModel]="post?.content" required<-->
+<!-->#content="ngModel"<-->
+<!-->Instead of <textarea rows="6" [value]="newPost" #postInput></textarea> Prop. binding for angular<-->
+  <!-->We don't need this one, (click)="onAddPost()" because we've forms already<-->
+  <!-->Instead of <button (click)="onAddPost(postInput)">Save Post</button> Event binding on angular without using jquery/JS features for event listening<-->
+  <!-->You can choose primary, accent or warn on button color<-->
+<!--><p>{{ newPost }}</p> Has now 2-way binding feature through [(ngModel)]="enteredValue"<-->
