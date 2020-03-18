@@ -52,8 +52,8 @@ exports.editPost = (req,res,next) => { //get the path requested by adding the fi
 
   Post.updateOne({_id: req.params.id, creator: req.userData.userId}, post) //.update() provided by Mongoose, similar to delete f(x) on mongoose but it needs 2nd arg where the new obj I wanted to store
   .then(result => {
- //console.log(result);
-    if(result.nModified>0){
+    //console.log(result);
+    if(result.n>0){
       res.status(200).json({
         message: 'Update Successful!'
       });
