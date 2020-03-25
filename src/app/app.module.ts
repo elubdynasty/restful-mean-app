@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; //using framwork for NgModel directive
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LoginComponent } from './auth/login/login.component';
-import { SignupComponent } from './auth/signup/signup.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { PostsModule } from './posts.module';
@@ -18,13 +15,10 @@ import { ErrorComponent } from './error/error.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
-    SignupComponent,
     ErrorComponent,
   ],
   imports: [
 
-    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
