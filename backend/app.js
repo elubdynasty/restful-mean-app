@@ -10,11 +10,13 @@ const userRoutes = require('./routes/user'); //import the user routes
 
 const app = express();
 app.use(express.json());
-app.use('/images', express.static(path.join('backend/images'))); //any requests targeting /images will be allowed to continue.
+app.use('/images', express.static(path.join(__dirname, 'images'))); //any requests targeting /images will be allowed to continue. 'backend/images' path for local dev only
 //app.use(bodyParser.urlencoded({ extended: false }));
 
+//static access to the angular folder
+app.use('/', express.static(path.join(__dirname,'angular')));
 
-mongoose.connect('mongodb+srv://blueleo09:xkb67Uj9nowtt9TD@cluster0-idic2.mongodb.net/node-angular') //?retryWrites=true&w=majority
+mongoose.connect('mongodb+srv://blueleo09:' + process.env.MONGO_ATLAS_PW+ '@cluster0-idic2.mongodb.net/node-angular') //?retryWrites=true&w=majority
   .then(() => {
     console.log('Connected to database');
   })
@@ -22,7 +24,7 @@ mongoose.connect('mongodb+srv://blueleo09:xkb67Uj9nowtt9TD@cluster0-idic2.mongod
     console.log('Connection failed!');
   });
 
-app.use((req,res,next) => {
+/*app.use((req,res,next) => {
   res.setHeader('Access-Control-Allow-Origin','*');
   res.setHeader(
     'Access-Control-Allow-Headers',
@@ -34,11 +36,14 @@ app.use((req,res,next) => {
   );
 
   next();
-});
+});*/
 
 app.use('/api/posts',postsRoutes); //making express aware of it as re-organizing the HTTP methods file
 //filter the req going to /api/posts & only req where the url or the path of the url
 //starts with that, will be 4warded into the postsRoutes file & routing setup
 app.use('/api/user',userRoutes);
+app.use((req,res,next) => { //to serve an angular app for any requests targeting this
+  res.sendFile(path.join(__dirname,'angular','index.html'));
+});
 
 module.exports = app;

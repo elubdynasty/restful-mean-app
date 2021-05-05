@@ -6,7 +6,7 @@ const postSchema = mongoose.Schema({
   content: {type: String, required: true},
   imagePath: {type: String, required: true}, //Added imagePath to the schema (to add images into the database)
   creator: { type: mongoose.Schema.Types.ObjectId,ref: 'User',required: true } //this data type will be an id //info who created this post
-  //we can do this by fetching userId from the tokden
+  //we can do this by fetching userId from the token
 
 });
 

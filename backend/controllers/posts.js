@@ -6,7 +6,7 @@ exports.createPost = (req,res,next) => { /*/api/posts*/ //taking out from ''
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
-    imagePath: url + "/images/" + req.file.filename, //an imagepath to be stored in the dbase
+    imagePath: url + '/images/' + req.file.filename, //an imagepath to be stored in the dbase
     creator: req.userData.userId
   });  //req.body;
   console.log(post);
